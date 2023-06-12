@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/size5"
+    android:orientation="vertical"
+    android:padding="@dimen/size10"
+    tools:background="@drawable/background_main_black_gradient">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMain"
+        android:layout_width="@dimen/size140"
+        android:layout_height="@dimen/size160"
+        android:backgroundTint="@android:color/transparent"
+        android:elevation="@dimen/size4"
+        app:cardCornerRadius="@dimen/size10">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/iconpoint"
+            android:scaleType="fitXY"
+            tools:src="@drawable/dummy_background_2" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/lblTitle"
+        style="@style/TextContext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size4"
+        android:gravity="center"
+        android:textSize="@dimen/text10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/dummy_name" />
+</androidx.appcompat.widget.LinearLayoutCompat>

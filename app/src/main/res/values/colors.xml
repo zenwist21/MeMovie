@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    custom-color-->
+    <color name="black_grey">#202020</color>
+    <color name="accent_green">#00FF00</color>
+    <color name="custom_yellow">#FFC702</color>
+    <color name="black_mild">#181818</color>
+    <color name="blue_mild">#014974</color>
+    <color name="glow_blue">#15425E</color>
+    <color name="blue_sky_little_dark">#009EFF</color>
+    <color name="button_text">#0C336E</color>
+    <color name="text_inactive">#B0BEC4</color>
+    <color name="text_inactive_darker">#5C6366</color>
+    <color name="blue_white_300">#E5F8FF</color>
+    <color name="blue_sky_bright">#25CCF4</color>
+    <color name="blue_sky_very_bright">#29D1F5</color>
+    <color name="black_100">#121212</color>
+    <color name="black_50">#111111</color>
+    <color name="black_200">#1C1D1F</color>
+    <color name="black_300">#111518</color>
+    <color name="black_400">#1B2125</color>
+    <color name="black_grey_200">#25282E</color>
+    <color name="grey_custom">#ff282C2F</color>
+    <color name="colorSoftGrey">#ECECEC</color>
+
+</resources>

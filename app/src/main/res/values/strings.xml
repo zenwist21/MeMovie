@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MeMovie</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- General String -->
+    <string name="welcome">Welcome ,</string>
+    <string name="welcome_name">%1$s ,</string>
+    <string name="dummy_welcome_name">Me Movie</string>
+    <string name="categories">Categories</string>
+    <string name="see_all">See All</string>
+
+    <!--    Movie String-->
+    <string name="title_movies">Movies List</string>
+    <string name="latest_movie">Latest Movie</string>
+    <string name="search_movies">Search Movie …</string>
+    <string name="list_trending_movies">List Trending Movies</string>
+
+    <!--    Movie String-->
+    <string name="title_tv_show">Tv Shows List</string>
+    <string name="latest_tv_show">Latest Tv Show</string>
+    <string name="search_tv_show">Search TV Show …</string>
+    <string name="iconpoint">iconPoint</string>
+    <string name="dummy_name">Marvel Avenger End Game</string>
+    <string name="dummy_category_name">Adventure</string>
+    <string name="list_movie">List Movies</string>
+    <string name="list_trending_tv_show">List Trending Tv Shows</string>
+    <string name="list_tv_shows">List Tv Shows</string>
+
+
+</resources>
