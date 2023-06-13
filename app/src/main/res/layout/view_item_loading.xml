@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/llcLoading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:background="@drawable/background_main_black_gradient"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavLoading"
+        android:layout_width="@dimen/size150"
+        android:layout_height="@dimen/size150"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loading.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1.0" />
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_wait"
+        style="@style/TextContext"
+        android:fontFamily="@font/montserrat" />
+    <TextView
+        android:id="@+id/tvTryAgain"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/size10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextContext"
+        android:padding="@dimen/size10"
+        tools:text="@string/try_again"
+        />
+</androidx.appcompat.widget.LinearLayoutCompat>
+

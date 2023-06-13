@@ -18,6 +18,7 @@
         app:cardCornerRadius="@dimen/size10">
 
         <ImageView
+            android:id="@+id/ivPoster"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/iconpoint"
@@ -26,7 +27,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/lblTitle"
+        android:id="@+id/tvTitle"
         style="@style/TextContext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -9,14 +9,18 @@ plugins {
 android {
     namespace 'com.example.memovie'
     compileSdk 33
-
+    def configPropertiesFile = rootProject.file("config.properties")
+    def configProperties = new Properties()
+    configProperties.load(new FileInputStream(configPropertiesFile))
     defaultConfig {
         applicationId "com.example.memovie"
         minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
+        buildConfigField("String", "BASE_MOVIE_URL", configProperties['BASE_MOVIE_URL'])
+        buildConfigField("String", "ACCESS_TOKEN", configProperties['ACCESS_TOKEN'])
+        buildConfigField("String", "SHARED_PREFERENCES_FILE_NAME", configProperties['SHARED_PREFERENCES_FILE_NAME'])
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

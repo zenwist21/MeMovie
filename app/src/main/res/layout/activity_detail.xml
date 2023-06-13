@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_main_black_gradient"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_main_black_gradient">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llcMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iToolbar"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size250"
+                    android:contentDescription="@string/iconpoint"
+                    android:scaleType="fitXY"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/dummy_image" />
+
+                <ImageView
+                    android:id="@+id/ivPlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size250"
+                    android:contentDescription="@string/iconpoint"
+                    android:scaleType="fitXY"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/dummy_image" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/size150"
+                    android:layout_height="@dimen/size150"
+                    android:layout_marginStart="@dimen/size24"
+                    android:layout_marginTop="@dimen/size170"
+                    android:src="@drawable/dummy_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnYt"
+                    android:layout_width="@dimen/size120"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size24"
+                    android:background="@drawable/background_rounded_red"
+                    android:drawableEnd="@drawable/ic_play"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:padding="@dimen/size5"
+                    android:text="@string/trailer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue_white_300"
+                    android:textSize="@dimen/text14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/size20"
+                android:paddingEnd="@dimen/size20">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/title_movies"
+                    android:textSize="@dimen/text28"
+                    android:theme="@style/TextH3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGenre"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_view_categories" />
+                <TextView
+                    android:id="@+id/tvSeeReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/see_review"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginBottom="@dimen/size10"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/blue_sky_bright"
+                    android:textSize="@dimen/text20"
+                    />
+                <TextView
+                    android:id="@+id/tvOverView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:text="@string/title_description"
+                    android:textSize="@dimen/text20"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginBottom="@dimen/size2"
+                    android:theme="@style/TextH3" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/description"
+                    android:textSize="@dimen/text14"
+                    android:theme="@style/TextContext" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include
+            android:id="@+id/iToolbar"
+            layout="@layout/toolbar" />
+
+        <include
+            android:id="@+id/iLoading"
+            layout="@layout/view_item_loading" />
+
+        <include
+            android:id="@+id/iError"
+            layout="@layout/item_view_list_error" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/size10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

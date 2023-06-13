@@ -28,6 +28,23 @@
     <string name="list_movie">List Movies</string>
     <string name="list_trending_tv_show">List Trending Tv Shows</string>
     <string name="list_tv_shows">List Tv Shows</string>
+    <string name="please_wait">Please Wait …</string>
+    <string name="no_data_exist">No data exist</string>
+    <string name="try_again">Try again</string>
+    <string name="confirm">Confirm</string>
+    <string name="select_categories">Select categories</string>
+    <string name="clear">Clear selections</string>
+    <string name="trailer">Trailer</string>
+    <string name="see_review">See All Reviews</string>
+    <string name="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="title_description">Overview</string>
+    <string name="title_detail">Detail</string>
+    <string name="no_video">No video</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="reviews">Reviews</string>
 
 
+    <string name="authorName">%1$s . %2$s</string>
+    <string name="end_of_data">End of data</string>
+    <string name="end_of_page">End of pages</string>
 </resources>

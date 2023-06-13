@@ -8,10 +8,21 @@
     <fragment
         android:id="@+id/navigation_movie"
         android:name="com.example.memovie.presentation.main.movie.MovieFragment"
-        tools:layout="@layout/fragment_movie" />
+        android:label="@string/title_movies"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_navigation_movie_to_navigation_tv_show"
+            app:destination="@id/navigation_tv_show" />
+    </fragment>
+
     <fragment
-        android:id="@+id/navigation_tv"
+        android:id="@+id/navigation_tv_show"
         android:name="com.example.memovie.presentation.main.tv_show.TvShowFragment"
-        tools:layout="@layout/fragment_tv_show" />
+        android:label="@string/title_tv_show"
+        tools:layout="@layout/fragment_tv_show" >
+        <action
+            android:id="@+id/action_navigation_tv_show_to_navigation_movie"
+            app:destination="@id/navigation_movie" />
+    </fragment>
 
 </navigation>
