@@ -7,6 +7,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.RecyclerView
+import com.example.memovie.R
 import com.example.memovie.core.utils.NetworkConstant.NOT_FOUND
 import com.example.memovie.databinding.ActivityReviewBinding
 import com.example.memovie.presentation.components.adapter.AdapterReview
@@ -93,6 +94,12 @@ class ReviewActivity : AppCompatActivity() {
         binding.btnToTop.setOnClickListener {
             binding.rvList.smoothScrollToPosition(0)
         }
+        binding.iError.tvTryAgain.setOnClickListener {
+            if (viewModel.state.value.error == NOT_FOUND) this.finish()
+            else {
+                viewModel.getData()
+            }
+        }
         binding.srlMain.setOnRefreshListener {
             if (binding.srlMain.isRefreshing) {
                 viewModel.getData()
@@ -117,11 +124,11 @@ class ReviewActivity : AppCompatActivity() {
     private fun showErrorView(state: ReviewUiState) {
         if (!state.error.isNullOrEmpty()) {
             if (state.currentPage == 1 && state.error == NOT_FOUND || state.currentPage >= 1 && state.error != NOT_FOUND) {
-                if (state.error == NOT_FOUND) binding.iError.tvTryAgain.hideView() else binding.iError.tvTryAgain.showView()
+                if (state.error == NOT_FOUND) binding.iError.tvTryAgain.text = getString(R.string.exit) else binding.iError.tvTryAgain.text = getString(R.string.try_again)
                 binding.iError.llcError.showView()
                 binding.llcMain.hideView()
                 binding.iLoading.llcLoading.hideView()
-                binding.iError.tvMessage.text = state.error
+                binding.iError.tvMessage.text = if (state.error == NOT_FOUND) getString(R.string.still_no_reviews) else state.error
                 binding.iError.tvTryAgain.showView()
             }
             return

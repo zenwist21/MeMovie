@@ -1,5 +1,6 @@
 package com.example.memovie.presentation.main.tv_show
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,14 +14,19 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.memovie.core.data.model.GenreModel
+import com.example.memovie.core.data.model.TmDbModel
 import com.example.memovie.core.utils.NetworkConstant
 import com.example.memovie.databinding.FragmentTvShowBinding
 import com.example.memovie.presentation.base.BaseFragment
 import com.example.memovie.presentation.components.adapter.AdapterGenre
 import com.example.memovie.presentation.components.adapter.MovieAdapter
+import com.example.memovie.presentation.detail.DetailActivity
+import com.example.memovie.presentation.detail.DetailType
 import com.example.memovie.presentation.main.GenreState
 import com.example.memovie.presentation.main.genreDetail.GenreDetailBottomSheet
 import com.example.memovie.presentation.utils.hideView
+import com.example.memovie.presentation.utils.itemID
+import com.example.memovie.presentation.utils.itemTYPE
 import com.example.memovie.presentation.utils.scheduledEvent
 import com.example.memovie.presentation.utils.setToolbarEvent
 import com.example.memovie.presentation.utils.showView
@@ -72,6 +78,21 @@ class TvShowFragment : BaseFragment<FragmentTvShowBinding>() {
                 else viewModel.getTvShowList()
             }
         }
+        adapterTvShow.setOnClickListener { data ->
+            Intent(requireActivity(), DetailActivity::class.java).also {
+                it.putExtra(itemID, (data as TmDbModel).id)
+                it.putExtra(itemTYPE, DetailType.TV_SHOW.name)
+                startActivity(it)
+            }
+        }
+         adapterTvShow.setOnClickListener { data ->
+            Intent(requireActivity(), DetailActivity::class.java).also {
+                it.putExtra(itemID, (data as TmDbModel).id)
+                it.putExtra(itemTYPE, DetailType.TV_SHOW.name)
+                startActivity(it)
+            }
+        }
+
         iError.tvTryAgain.setOnClickListener {
             viewModel.execute()
         }

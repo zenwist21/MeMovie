@@ -90,6 +90,13 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>() {
                 startActivity(it)
             }
         }
+        adapterTrendingMovie.setOnClickListener { data ->
+            Intent(requireActivity(), DetailActivity::class.java).also {
+                it.putExtra(itemID, (data as TmDbModel).id)
+                it.putExtra(itemTYPE, DetailType.MOVIE.name)
+                startActivity(it)
+            }
+        }
         genre.setOnClickListener { data ->
             lifecycleScope.launch {
                 viewModel.setOrRemoveSelectedPosition(data ?: GenreModel())

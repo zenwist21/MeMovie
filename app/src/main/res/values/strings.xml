@@ -47,4 +47,6 @@
     <string name="authorName">%1$s . %2$s</string>
     <string name="end_of_data">End of data</string>
     <string name="end_of_page">End of pages</string>
+    <string name="exit">Exit</string>
+    <string name="still_no_reviews">There are no reviews yet</string>
 </resources>
