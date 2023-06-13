@@ -193,9 +193,9 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>() {
                     launch {
                         if (it.listTrendingMovie.isNotEmpty()) {
                             adapterTrendingMovie.differ.submitList(it.listTrendingMovie)
-                            adapterMovie.setViewError(false)
+                            adapterTrendingMovie.setViewError(false)
                         } else {
-                            adapterMovie.setViewError(true, NOT_FOUND)
+                            adapterTrendingMovie.setViewError(true, NOT_FOUND)
                         }
                     }
                 }

@@ -85,7 +85,7 @@ class TvShowFragment : BaseFragment<FragmentTvShowBinding>() {
                 startActivity(it)
             }
         }
-         adapterTvShow.setOnClickListener { data ->
+         adapterTrendingTvShow.setOnClickListener { data ->
             Intent(requireActivity(), DetailActivity::class.java).also {
                 it.putExtra(itemID, (data as TmDbModel).id)
                 it.putExtra(itemTYPE, DetailType.TV_SHOW.name)
@@ -194,7 +194,7 @@ class TvShowFragment : BaseFragment<FragmentTvShowBinding>() {
                             adapterTrendingTvShow.differ.submitList(it.listTrendingTV)
                             adapterTrendingTvShow.setViewError(false)
                         } else {
-                            adapterTvShow.setViewError(true, NetworkConstant.NOT_FOUND)
+                            adapterTrendingTvShow.setViewError(true, NetworkConstant.NOT_FOUND)
                         }
                     }
                 }
